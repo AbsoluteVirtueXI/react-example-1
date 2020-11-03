@@ -16,6 +16,7 @@ function Counter() {
   const [counter, setCounter] = useState(0)
   const [step, setStep] = useState(1)
   const toast = useToast()
+
   const handleIncrement = (step) => {
     const cnt = counter + step
     setCounter(counter + step)
@@ -48,6 +49,7 @@ function Counter() {
 
   const handleReset = () => {
     setCounter(0)
+    setStep(1)
     toast({
       title: `Counter reseted to 0`,
       description: `Counter is now 0`,
